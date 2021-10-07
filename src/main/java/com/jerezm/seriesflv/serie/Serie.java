@@ -99,10 +99,12 @@ public class Serie {
 
     @Override
     public String toString() {
-        return "Serie [id=" + id 
-            + ", serieName=" + serieName 
-            + ", serieDescription=" + serieDescription 
-            + ", imageUrl=" + imageUrl + "]";
+        return "{ " + 
+            "id='" + id + "'" +
+            ", serieName='" + serieName + "'" +
+            ", serieDescription='" + serieDescription + "'" +
+            ", imageUrl='" + imageUrl + "'" +
+            "}";
     }
 
 }

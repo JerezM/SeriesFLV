@@ -59,10 +59,11 @@ public class Episode {
 
     @Override
     public String toString() {
-        return "Episode [id=" + id +
-            ", episodeNumber=" + episodeNumber +
-            ", episodeSourceUrl=" + episodeSourceUrl + 
-            "]";
+        return "{ " + 
+            "id='" + id + "'" +
+            ", episodeNumber='" + episodeNumber + "'" +
+            ", episodeSourceUrl='" + episodeSourceUrl + "'" + 
+            "}";
     }
     
 }
