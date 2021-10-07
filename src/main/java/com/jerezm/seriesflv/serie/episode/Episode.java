@@ -8,9 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity(name = "Episode")
 @Table(name = "episode")
 public class Episode {
@@ -28,16 +25,12 @@ public class Episode {
     @Column(
         name = "episode_id"
     )
-    @Getter
-    @Setter
     private Integer id;
 
     @Column(
             name = "episode_number",
             nullable = false
     )
-    @Getter
-    @Setter
     private Integer episodeNumber;
 
     @Column(
@@ -45,8 +38,6 @@ public class Episode {
             nullable = false,
             columnDefinition = "TEXT"
     )
-    @Getter
-    @Setter
     private String episodeSourceUrl;
 
     public Episode(Integer id, Integer episodeNumber, String episodeSourceUrl) {
@@ -56,6 +47,30 @@ public class Episode {
     }
 
     public Episode() {}
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getEpisodeNumber() {
+        return episodeNumber;
+    }
+
+    public void setEpisodeNumber(Integer episodeNumber) {
+        this.episodeNumber = episodeNumber;
+    }
+
+    public String getEpisodeSourceUrl() {
+        return episodeSourceUrl;
+    }
+
+    public void setEpisodeSourceUrl(String episodeSourceUrl) {
+        this.episodeSourceUrl = episodeSourceUrl;
+    }
 
     @Override
     public String toString() {

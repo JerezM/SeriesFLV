@@ -17,9 +17,6 @@ import javax.persistence.Table;
 
 import com.jerezm.seriesflv.serie.episode.Episode;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity(name = "Serie")
 @Table(name = "serie")
 public class Serie {
@@ -37,8 +34,6 @@ public class Serie {
     @Column(
         name = "serie_id"
     )
-    @Getter
-    @Setter
     private Integer id;
 
     @Column(
@@ -46,8 +41,6 @@ public class Serie {
             nullable = false,
             columnDefinition = "TEXT"
     )
-    @Getter
-    @Setter
     private String serieName;
 
     @Column(
@@ -55,8 +48,6 @@ public class Serie {
             nullable = false,
             columnDefinition = "TEXT"
     )
-    @Getter
-    @Setter
     private String serieDescription;
 
     @Column(
@@ -64,8 +55,6 @@ public class Serie {
             nullable = false,
             columnDefinition = "TEXT"
     )
-    @Getter
-    @Setter
     private String imageUrl;
 
     //uni-directional one-to-may association with Episode
@@ -97,6 +86,39 @@ public class Serie {
         return this.episodes;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getSerieName() {
+        return serieName;
+    }
+
+    public void setSerieName(String serieName) {
+        this.serieName = serieName;
+    }
+
+    public String getSerieDescription() {
+        return serieDescription;
+    }
+
+    public void setSerieDescription(String serieDescription) {
+        this.serieDescription = serieDescription;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+
     @Override
     public String toString() {
         return "{ " + 
@@ -106,5 +128,4 @@ public class Serie {
             ", imageUrl='" + imageUrl + "'" +
             "}";
     }
-
 }
