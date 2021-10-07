@@ -30,7 +30,7 @@ public class Episode {
     )
     @Getter
     @Setter
-    private Long id;
+    private Integer id;
 
     @Column(
             name = "episode_number",
@@ -49,7 +49,7 @@ public class Episode {
     @Setter
     private String episodeSourceUrl;
 
-    public Episode(Long id, Integer episodeNumber, String episodeSourceUrl) {
+    public Episode(Integer id, Integer episodeNumber, String episodeSourceUrl) {
         this.id = id;
         this.episodeNumber = episodeNumber;
         this.episodeSourceUrl = episodeSourceUrl;

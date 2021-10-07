@@ -39,7 +39,7 @@ public class Serie {
     )
     @Getter
     @Setter
-    private Long id;
+    private Integer id;
 
     @Column(
             name = "serie_name",
@@ -80,7 +80,7 @@ public class Serie {
     )
     private List<Episode> episodes = new ArrayList<Episode>();
 
-    public Serie(Long id, String serieName, String serieDescription, String imageUrl) {
+    public Serie(Integer id, String serieName, String serieDescription, String imageUrl) {
         this.id = id;
         this.serieName = serieName;
         this.serieDescription = serieDescription;
