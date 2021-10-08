@@ -23,7 +23,7 @@ public class SerieServiceTest {
 
     // ---- getAllSeries method test ----
     @Test
-    void canGetStudents() {
+    void canGetSeries() {
         //when
         this.serieServiceUnderTest.getAllSeries();
 
