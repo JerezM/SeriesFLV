@@ -22,7 +22,7 @@ const SerieList = () => {
             <h1>Series</h1>
 
             <ul className="list-group">
-                {console.log(series)
+                {console.log("Series: "+JSON.stringify(series))
                 /*series.map( serie => 
                     <li>
                         <Serie
