@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Card, Row, Col } from 'react-bootstrap';
 
-import { retrieveSeriesAction } from "../redux/actions/serieAction"
+import { retrieveSeriesAction } from '../redux/actions/serieAction';
 
-//import Serie from './Serie'
+import imgTest from '../testImg.jpg';
+
+
+//import SerieListElement from './SerieListElement'
 
 
 const SerieList = () => {
@@ -15,25 +19,25 @@ const SerieList = () => {
         fetchSeries();
     },[]);
 
-    const series = useSelector(state => state.series.series)
+    const series = useSelector(state => state.series.series);
+
 
     return (
         <div className="serie-list">
-            <h1>Series</h1>
+            <h2>Series</h2>
 
-            <ul className="list-group">
-                {console.log("Series: "+JSON.stringify(series))
-                /*series.map( serie => 
-                    <li>
-                        <Serie
-                            key = {item.id}
-                            id = {item.id}
-                            item = {item}
-                        />
-                    </li>
-                    )
-                */}
-            </ul>
+            <Row xs={4} md={6} className="g-4">
+                {series.map( serie => (
+                    <Col>
+                        <Card>
+                            <Card.Img variant="top" src={imgTest} />
+                            <Card.Body>
+                                <Card.Title>{serie.serieName}</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
 
         </div>
     );
