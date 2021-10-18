@@ -5,12 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import SerieList from './component/SerieList';
+import Header from './component/Header';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
-        <header></header>
+        <Header/>
         <div className="app">
           <Switch>
             <Route exact path={["/", "/series"]} component={SerieList} />
